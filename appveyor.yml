@@ -8,7 +8,7 @@ install:
   - bin\build.bat
   - ps: Install-Product node '' x86
   - bin\build.bat
-  - 7z a -r ffi-napi-win32.zip .\build
+  - 7z a ffi-napi-win32.zip .\build\*
 
 build: off
 
