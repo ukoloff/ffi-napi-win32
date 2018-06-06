@@ -1,0 +1,13 @@
+version: 1.0.{build}-{branch}
+
+shallow_clone: true
+
+install:
+  - ps: Install-Product node '' x64
+  - node -v
+  - npm -v
+  - ps: Install-Product node '' x86
+  - node -v
+  - npm -v
+
+build: off
