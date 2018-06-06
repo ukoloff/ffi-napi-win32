@@ -3,6 +3,7 @@ version: 1.0.{build}-{branch}
 shallow_clone: true
 
 install:
+  - git clone https://github.com/node-ffi-napi/node-ffi-napi.git src --depth 1
   - ps: Install-Product node '' x64
   - bin\build.bat
   - ps: Install-Product node '' x86
