@@ -4,10 +4,8 @@ shallow_clone: true
 
 install:
   - ps: Install-Product node '' x64
-  - node -v
-  - npm -v
+  - bin\build.bat
   - ps: Install-Product node '' x86
-  - node -v
-  - npm -v
+  - bin\build.bat
 
 build: off
