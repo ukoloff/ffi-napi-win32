@@ -5,9 +5,9 @@ call npm -v
 git clone src %NArch%
 cd %NArch%
 call npm install
-xcopy /SIY lib ../build/lib
-xcopy /Y build/Release/ffi_bindings.node ../build/lib/%NArch%-ffi_bindings.node
-For %%a in (package.json CHANGELOG.md) do xcopy /Y %%a ../build/
+xcopy lib ..\build\lib /SIY
+xcopy build\Release\ffi_bindings.node ..\build\lib\%NArch%-ffi_bindings.node /Y
+For %%a in (package.json CHANGELOG.md) do xcopy %%a ..\build\ /Y
 cd ..
-xcopy /Y README.md build/
-xcopy /Y lib build/lib
+xcopy README.md build\ /Y
+xcopy lib build\lib /Y
