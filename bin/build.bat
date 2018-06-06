@@ -13,3 +13,4 @@ For %%a in (package.json CHANGELOG.md) do copy /B /Y %%a ..\build\
 cd ..
 copy /B /Y README.md build\
 copy /B /Y lib build\lib
+echo Done...
